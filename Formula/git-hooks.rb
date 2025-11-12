@@ -5,30 +5,30 @@
 class GitHooks < Formula
   desc ""
   homepage "https://github.com/rudderlabs/git-hooks/"
-  version "1.1.3"
+  version "1.1.4"
 
   depends_on "gitleaks" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rudderlabs/git-hooks/releases/download/v1.1.3/git-hooks_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/rudderlabs/git-hooks/releases/download/v1.1.4/git-hooks_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "9d055b94facd89c9b14bd1c79b893f25775cca0b3a5fec36f4f4901205140d37"
+      sha256 "45ab089c5ea510abf6ade75dca9b656d6a589d75061c4a2af863973cbd3a40c0"
 
       def install
         bin.install "git-hooks"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rudderlabs/git-hooks/releases/download/v1.1.3/git-hooks_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/rudderlabs/git-hooks/releases/download/v1.1.4/git-hooks_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "5da5c21e8fb25023146a02418e0a8074459e4e71ed330a64f1a89e9e873b7511"
+      sha256 "317274f8eb9c7ad92c321671df26ef9481bd06319f0d2730a01bbfd8318982c1"
 
       def install
         bin.install "git-hooks"
@@ -38,23 +38,23 @@ class GitHooks < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rudderlabs/git-hooks/releases/download/v1.1.3/git-hooks_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/rudderlabs/git-hooks/releases/download/v1.1.4/git-hooks_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "134d3ea9f9432a66ac94babb17d6032a8a6238ed8b19d9c503670ee07b0af768"
+      sha256 "55f3953aaf669dda93f28176e606e8bc231e747303270af5305dffa033d6ba89"
       def install
         bin.install "git-hooks"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rudderlabs/git-hooks/releases/download/v1.1.3/git-hooks_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/rudderlabs/git-hooks/releases/download/v1.1.4/git-hooks_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "53577b837e4682704483b0a3d181aa78a0e2fc8e23ec4df9d627f41b8fca8a64"
+      sha256 "a55987758a4453f8bb5b93bbf0a82a7a7732a2b6178308fdc6cafa91936fe1f2"
       def install
         bin.install "git-hooks"
       end
